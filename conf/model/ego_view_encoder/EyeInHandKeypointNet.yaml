@@ -1,0 +1,4 @@
+_target_: policy_models.network_modules.EyeInHandKeypointNet
+_partial_: True
+num_kp: 16
+remove_layer_num: 4

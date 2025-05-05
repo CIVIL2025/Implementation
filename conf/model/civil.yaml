@@ -1,0 +1,14 @@
+_target_: policy_models.civil_model.CIVIL
+token_dim: 128
+action_dim: 8
+state_dim: 8
+beacon_dim: 6
+defaults:
+  - _self_
+  - state_encoder: default
+  - beacon_encoder: beacon_encoder
+  - static_view_encoder: resnet
+  - ego_view_encoder: default
+  - transformer_encoder: default
+  - action_head: default
+  - pos_encoder: default

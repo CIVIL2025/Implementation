@@ -1,0 +1,17 @@
+data_root: '/projects/recon/human-placed-markers/user_study'
+sampled_demos: 'traditional_demo_set_0'
+
+dataset_dir: '${.data_root}/${.sampled_demos}'
+playset_dir: null
+
+num_demos: 15
+
+dataset_name: 'training_demos_augmented.hd5f'
+playset_name: 'play_demos_augmented.hd5f'
+
+target_beacons:
+  - coffee_maker_pos
+  - red_mug_pos
+target_masks:
+  - red_cup
+  - coffee_maker

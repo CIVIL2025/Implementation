@@ -1,0 +1,49 @@
+name: block_stacking
+task_categories:
+  stack_on_pink_block: 10
+  stack_on_blue_block: 10
+
+tasks:
+  stack_on_blue_block:
+    - condition:
+        lightbulb: 1
+        red_block: "grasped"
+        grasped: 1
+      effect:
+        red_block: "stacked_top" 
+        blue_block: "stacked_bottom"
+        grasped: 0
+  stack_on_pink_block:
+    - condition: 
+        lightbulb: 0
+        red_block: "grasped"
+        grasped: 1
+      effect:
+        red_block: "stacked_top" 
+        pink_block: "stacked_bottom"
+        grasped: 0
+
+
+possible_conditions:
+  led: [0, 1]
+  lightbulb: [0, 1]
+  slider:
+    - "left"
+    - "right"
+  drawer:
+    - "closed"
+    - "open"
+  red_block:
+    - "grasped"
+  blue_block:
+    - "table"
+    - "slider_right"
+    - "slider_left"
+  pink_block:
+    - "table"
+    - "slider_right"
+    - "slider_left"
+  grasped: [1]
+
+additional_constrains: ['block_stacking']
+random_robot_initial_position: False

@@ -1,0 +1,14 @@
+data_root: '/projects/recon/human-placed-markers/expert_demos'
+
+dataset_dir: '${.data_root}/pick_red_cup'
+playset_dir: '${.data_root}/pick_cup_play'
+
+num_demos: 20
+
+dataset_name: 'training_demos_augmented.hd5f'
+playset_name: 'play_demos_augmented.hd5f'
+
+target_beacons:
+  - red_cup_pos
+target_masks:
+  - red_cup

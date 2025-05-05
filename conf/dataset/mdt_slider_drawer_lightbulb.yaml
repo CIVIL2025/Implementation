@@ -1,0 +1,31 @@
+# sample 
+data_root: '/projects/recon/RT1/expert_demos/calvin'
+
+dataset_dir: '${.data_root}/mdt_slider_drawer_lightbulb_segmen_${.num_demos}/training'
+playset_dir: NULL
+
+dataset_name: 'training_demos_augmented.hd5f'
+playset_name: 'play_demos_augmented.hd5f'
+
+num_demos: 50
+
+target_beacons:
+  - 'light_pos'
+  - 'light_rot'
+  - 'slider_pos'
+  - 'slider_rot'
+  - 'drawer_pos'
+  - 'drawer_rot'
+
+target_masks:
+  - 'light'
+  - 'slider'
+  - 'drawer'
+
+viola_masks:
+  - 'drawer'
+  - 'blue_block'
+  - 'light'
+  - 'gripper_fingers'
+  - 'slider'
+  - 'purple_block'

@@ -1,0 +1,14 @@
+data_root: '/projects/recon/human-placed-markers/expert_demos'
+
+dataset_dir: '${.data_root}/bowl_pulling_new'
+playset_dir: null
+
+num_demos: 20
+
+dataset_name: 'training_demos_augmented.hd5f'
+playset_name: 'play_demos_augmented.hd5f'
+
+target_beacons:
+  - bowl_pos
+target_masks:
+  - bowl

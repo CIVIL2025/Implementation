@@ -1,0 +1,7 @@
+_target_: policy_models.network_modules.BBoxPositionEncoding
+_partial_: True
+scaling_ratio: 128.
+use_noise: False
+pixel_var: 1
+dim: 4
+factor_ratio: 1.

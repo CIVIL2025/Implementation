@@ -1,0 +1,10 @@
+_target_: policy_models.network_modules.TemporalGMMPolicyMLPLayer
+_partial_: True
+num_modes: 5
+min_std: 0.0001
+num_layers: 2
+num_dim: 1024
+mlp_activation: "relu"
+std_activation: "softplus"
+low_noise_eval: False
+use_tanh: False

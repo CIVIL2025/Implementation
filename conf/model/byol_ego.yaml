@@ -1,0 +1,33 @@
+model:
+  _target_: policy_models.byol_ego_model.BYOLEgoTransformer
+  state_dim: 8
+  action_dim: 7
+  beacon_dim: 3
+  num_heads: 4
+  num_layers: 2
+  encoder_pretrained: False
+  pretrain_epoch: 500
+  use_ee: False
+
+pretrain_batch_size: 512
+use_play: True
+obs_specs:
+  - obs:
+      rgb:
+        - image_rgb
+        - image_ego
+      low_dim:
+        - joint_states
+        - ee_states
+        - gripper_states
+        - beacons
+  - obs:
+      rgb:
+        - image_rgb
+      low_dim:
+        - beacons
+  
+img_size: [200, 200]
+mask_size: [200, 200]
+action_type: 'rel_actions'
+separate_channel_mask: False

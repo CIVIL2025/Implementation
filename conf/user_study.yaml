@@ -1,0 +1,16 @@
+defaults: 
+  - _self_
+  - cameras: user_study_cameras
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled 
+
+user_id: 20
+mode: 'play' # 'traditional' or 'CIVIL' or 'trial' of 'play'
+save_dir: 'user_study'
+
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+

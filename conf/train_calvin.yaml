@@ -1,0 +1,16 @@
+defaults:
+  - _self_
+  - model: beacon_egomask
+  - dataset: lift_red_block
+  - params: default
+
+user_name: ???
+job_id: ???
+output_dir: training_outputs/${user_name}/${now:%Y-%m-%d}/${job_id}_${now:%H-%M-%S}
+
+hydra:
+  run:
+    dir: ${output_dir}
+  sweep:
+    dir: .
+    subdir: . 

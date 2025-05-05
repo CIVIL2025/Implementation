@@ -1,0 +1,9 @@
+- obs:
+    rgb:
+      - image_rgb
+      - image_ego
+    low_dim:
+      - joint_states
+      - ee_states
+      - gripper_states
+      - image_bbox

@@ -1,0 +1,39 @@
+name: lift_red_block_table
+task_categories:
+  lift_red_block_table: 4
+
+tasks:
+  lift_red_block_table: 
+    - condition:
+        red_block: 'table'
+        grasped: 0
+      effect:
+        red_block: 'grasped'
+        grasped: 1
+
+possible_conditions:
+  led: [0, 1]
+  lightbulb: [0, 1]
+  slider:
+    - "left"
+    - "right"
+  drawer:
+    - "open"
+    - "closed"
+  red_block:
+    - "table"
+  blue_block:
+    - "table"
+    - "slider_right"
+    - "slider_left"
+  pink_block:
+    - "table"
+    - "slider_right"
+    - "slider_left"
+  grasped: [0]
+
+  
+
+additional_constrains: []
+
+random_robot_initial_position: False

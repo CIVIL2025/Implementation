@@ -1,0 +1,6 @@
+_target_: policy_models.network_modules.ResnetConv
+pretrained: False
+no_training: False
+remove_layer_num: 4
+img_c: 3
+no_stride: False

@@ -1,0 +1,2 @@
+_target_: policy_models.network_modules.FlattenProjection
+_partial_: True

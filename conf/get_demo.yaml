@@ -1,0 +1,16 @@
+defaults: 
+  - _self_
+  - cameras: static_and_gripper
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled 
+
+demo_name: null
+save_dir: 'doh'
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+
+
+

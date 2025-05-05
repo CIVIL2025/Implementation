@@ -1,0 +1,27 @@
+model:
+  _target_: policy_models.beacon_egomask_model.BeaconEgoMaskTransformer
+  beacon_dim: 6 
+
+use_play: True
+mask_type: gt
+obs_specs:
+  - obs:
+      rgb:
+        - image_rgb
+        - image_ego
+      low_dim:
+        - image_ego_mask
+        - joint_states
+        - ee_states
+        - gripper_states
+        - beacons
+  - obs:
+      rgb:
+        - image_rgb
+      low_dim:
+        - beacons
+
+img_size: [200, 200]
+mask_size: [200, 200]
+action_type: 'rel_actions'
+separate_channel_mask: False

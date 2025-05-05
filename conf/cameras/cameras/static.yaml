@@ -1,0 +1,9 @@
+_target_: utils.camera
+cam_id: 0
+aruco_detector: 
+  _target_: dataset_processing.aruco_detector.VisionDetector
+  marker_size: 0.02
+  calibration_dir: 'aruco_camera_calibration/static_camera'
+# roi: [130, 0, 423, 538]
+
+

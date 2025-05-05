@@ -1,0 +1,33 @@
+model:
+  _target_: policy_models.beacon_encoder_latent_model.BeaconEncoderLatentTransformer
+  latent_model_dir: Null
+  
+use_play: False
+mask_type: gt
+obs_specs:
+  - obs:
+      rgb:
+        - image_rgb
+        - image_ego
+      low_dim:
+        - image_mask
+        - image_ego_mask
+        - joint_states
+        - ee_states
+        - gripper_states
+        - beacons
+  - obs:
+      rgb:
+        - image_rgb
+        - image_ego
+      low_dim:
+        - image_mask
+        - image_ego_mask
+
+
+img_size: [200, 200]
+mask_size: [200, 200]
+img_ego_size: [200, 200]
+mask_ego_size: [200, 200]
+action_type: 'rel_actions'
+separate_channel_mask: False

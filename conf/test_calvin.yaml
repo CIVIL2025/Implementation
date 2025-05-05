@@ -1,0 +1,28 @@
+defaults:
+  - _self_
+  - evaluation: lift_red_from_edge
+  - model_list: ???
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled 
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+    
+env:
+  val_folder: "/projects/recon/calvin/dataset/task_D_D/validation"
+  show_gui: False
+  conf_dir: "/projects/calvin/calvin_models/conf"
+  task_cfg: "${env.conf_dir}/callbacks/rollout/tasks/new_playtable_tasks.yaml"
+  val_annotations: "${env.conf_dir}/annotations/new_playtable_validation.yaml"
+
+test_round: 1
+num_sequences: 100
+step_len: 200
+debug: False
+
+init_condition_path: NULL
+
+video_save_mode: none # none, all, success
+attn_save_mode: none

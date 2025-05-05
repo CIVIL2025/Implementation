@@ -1,0 +1,3 @@
+_target_: utils.camera
+cam_id: 2
+aruco_detector: NULL

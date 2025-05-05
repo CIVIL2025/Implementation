@@ -1,0 +1,14 @@
+data_root: '/projects/recon/human-placed-markers/expert_demos'
+
+dataset_dir: '${.data_root}/push_button'
+playset_dir: null
+
+num_demos: 10
+
+dataset_name: 'training_demos_augmented.hd5f'
+playset_name: 'play_demos_augmented.hd5f'
+
+target_beacons:
+  - red_button_pos
+target_masks:
+  - red_button

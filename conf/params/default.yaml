@@ -1,0 +1,7 @@
+device: cuda
+epoch: 500
+lr: 1e-4
+batch_size: 128
+seq_len: 5
+use_play: ${model.use_play}
+color_jitter: False

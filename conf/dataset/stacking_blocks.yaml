@@ -1,0 +1,31 @@
+# sample
+data_root: '/projects/recon/RT1/expert_demos/calvin'
+
+dataset_dir: '${.data_root}/mdt_test_stacking_block_segmen_${.num_demos}/training'
+playset_dir: '${.data_root}/subset_D_play_segmen/training'
+
+dataset_name: 'training_demos_augmented.hd5f'
+playset_name: 'play_demos_augmented.hd5f'
+
+num_demos: 150
+
+target_beacons: 
+  - 'light_pos'
+  - 'light_rot'
+  - 'blue_block_pos'
+  - 'blue_block_rot'
+  - 'pink_block_pos'
+  - 'pink_block_rot'
+
+target_masks: 
+  - 'light'
+  - 'blue_block'
+  - 'purple_block'
+  
+viola_masks:
+  - 'red_block'
+  - 'blue_block'
+  - 'purple_block'
+  - 'gripper_fingers'
+  - 'slider'
+  - 'light'

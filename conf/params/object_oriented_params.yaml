@@ -1,0 +1,16 @@
+device: cuda
+epoch: 50
+lr: 1e-4
+batch_size: 16
+seq_len: 9
+use_play: False
+grad_clip: 10
+use_color_jitter: True
+keep_percent: 10
+color_jitter:
+  brightness: 0.3
+  contrast: 0.3
+  saturation: 0.3
+  hue: 0.05
+
+ 

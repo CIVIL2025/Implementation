@@ -1,0 +1,6 @@
+tested_checkpoint: 
+  # - 399
+  # - 499
+  - best
+models_dir:
+  - /projects/recon/new_recon_transformer/training_outputs/2025-03-24/2986499_05-10-33

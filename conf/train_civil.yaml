@@ -1,0 +1,28 @@
+defaults:
+  - _self_
+  - model: civil
+  - dataset: pick_red_cup
+  - params: default # object_oriented_params
+  - optimizer: adam
+  - scheduler: steplr
+  - loss_fn: MSELoss
+  - obs_specs: default # bc, language, image_bbox
+
+
+img_size: [200, 200]
+mask_size: [200, 200]
+img_ego_size: [200, 200]
+mask_ego_size: [200, 200]
+action_type: 'joint_vel'
+separate_channel_mask: False
+
+user_name: ???
+job_id: ???
+output_dir: training_outputs/${user_name}/${now:%Y-%m-%d}/${job_id}_${now:%H-%M-%S}
+
+hydra:
+  run:
+    dir: ${output_dir}
+  sweep:
+    dir: .
+    subdir: . 

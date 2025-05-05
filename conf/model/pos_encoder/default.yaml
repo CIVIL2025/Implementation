@@ -1,0 +1,4 @@
+_target_: policy_models.network_modules.PositionalEncoding
+_partial_: true
+max_len: ${params.seq_len}
+freq: 10.0

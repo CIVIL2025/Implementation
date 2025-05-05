@@ -1,0 +1,9 @@
+_target_: torch.nn.TransformerEncoder
+encoder_layer: 
+  _target_: torch.nn.TransformerEncoderLayer
+  d_model: ${model.token_dim}
+  nhead: 4
+  activation: "relu"
+  batch_first: True
+  norm_first: False
+num_layers: 2

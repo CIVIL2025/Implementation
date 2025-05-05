@@ -1,0 +1,18 @@
+model:
+  _target_: policy_models.clip_model.CLIPTransformer
+
+use_play: False
+obs_specs:
+  - obs:
+      rgb:
+        - image_rgb
+      low_dim:
+        - joint_states
+        - ee_states
+        - gripper_states
+        - beacons
+  
+img_size: [200, 200]
+mask_size: [200, 200]
+action_type: 'rel_actions'
+separate_channel_mask: False

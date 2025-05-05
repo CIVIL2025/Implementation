@@ -1,0 +1,4 @@
+_target_: policy_models.network_modules.TemporalSinusoidalPositionEncoding
+_partial_: True
+inv_freq_factor: 10
+factor_ratio: null

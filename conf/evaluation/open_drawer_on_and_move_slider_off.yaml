@@ -1,0 +1,44 @@
+name: open_drawer_on_and_move_slider_off
+task_categories:
+  move_slider_left: 2
+  open_drawer: 3
+
+tasks:
+  move_slider_left: 
+    - condition:
+        slider: 'right'
+        lightbulb: 0
+        grasped: 0
+      effect:
+        slider: 'left'
+  open_drawer:
+    - condition:
+        drawer: "closed"
+        lightbulb: 1
+        grasped: 0
+      effect:
+        drawer: "open"
+
+possible_conditions:
+  led: [0, 1]
+  lightbulb: [0, 1]
+  slider:
+    - "right"
+  drawer:
+    - "closed"
+  red_block:
+    - "table"
+    - "slider_right"
+    - "slider_left"
+  blue_block:
+    - "table"
+    - "slider_right"
+    - "slider_left"
+  pink_block:
+    - "table"
+    - "slider_right"
+    - "slider_left"
+  grasped: [0]
+
+additional_constrains: []
+random_robot_initial_position: False

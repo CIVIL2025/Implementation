@@ -1,0 +1,19 @@
+- obs:
+    rgb:
+      - image_rgb
+      - image_ego
+    low_dim:
+      - image_mask
+      - image_ego_mask
+      - joint_states
+      - ee_states
+      - gripper_states
+      - beacons
+- obs:
+    rgb:
+      - image_rgb
+      - image_ego
+    low_dim:
+      - image_mask
+      - image_ego_mask
+      - beacons

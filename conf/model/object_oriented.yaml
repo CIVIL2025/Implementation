@@ -1,0 +1,21 @@
+_target_: policy_models.object_oriented_model.ObjectOriented
+img_size: ${img_size}
+ego_size: ${img_ego_size}
+token_dim: 128
+state_dim: 8
+action_dim: 8
+k_obj: 2
+defaults:
+  - _self_
+  - data_aug: DataAugGroup
+  - img_aug: IdentityAug
+  - static_view_encoder@encoder: ResnetConv
+  - pooling: RoIAlignWrapper
+  - projection: FlattenProjection
+  - pos_encoder@bbox_norm: BBoxPositionEncoding 
+  - projection@spatial_projection: SpatialProjection 
+  - ego_view_encoder@ego_encoder: EyeInHandKeypointNet
+  - pos_encoder: TemporalSinusoidalPositionEncoding
+  - transformer_encoder: torch_encoder
+  - state_encoder: default
+  - action_head: default

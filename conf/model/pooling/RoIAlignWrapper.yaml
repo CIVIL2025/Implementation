@@ -1,0 +1,6 @@
+_target_: policy_models.network_modules.RoIAlignWrapper
+_partial_: True
+output_size: [6, 6]
+sampling_ratio: -1
+aligned: True
+bbox_size: 4
